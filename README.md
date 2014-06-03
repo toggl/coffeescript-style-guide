@@ -346,6 +346,12 @@ In cases where method calls are being chained, some adopters of this style prefe
 
 The function grouping style is not recommended. However, **if the function grouping style is adopted for a particular project, be consistent with its usage.**
 
+Be very careful when omit parentheses in condition clauses. This might lead to hidden bugs. Put parentheses if in doubt on how compiler will group it.
+```coffeescript
+if some.indexOf(10) is -1 # Yes
+if some.indexOf 10 is -1 # No
+```
+
 <a name="strings"/>
 ## Strings
 

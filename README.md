@@ -36,6 +36,7 @@ The details in this guide have been very heavily inspired by several existing st
     * [Naming Conventions](#naming_conventions)
     * [Functions](#functions)
     * [Strings](#strings)
+    * [Object Literal](#object-literal)
     * [Conditionals](#conditionals)
     * [Looping and Comprehensions](#looping_and_comprehensions)
     * [Extending Native Objects](#extending_native_objects)
@@ -333,9 +334,10 @@ Inside object literals don't use quote marks if possible
 ```coffeescript
 obj =
   user: new User() # Yes
+  'class-name': 'white' # Yes
 
 obj =
-  'user': new User() # Yes # No
+  'user': new User() # No
 ```
 
 <a name="conditionals"/>

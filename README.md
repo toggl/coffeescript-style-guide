@@ -247,6 +247,25 @@ _privateMethod: ->
 
 Filename should be dash (-) separated.
 
+Don't shortcut variable names if not absolutely necessary.
+```coffeescript
+trans = getTransform() # No
+u = getUser() # No
+
+transform = getTransform() # Yes
+user = getUser() # Yes
+```
+
+Though there might be exception in cases where some shortcut is part of internal knowledge domain. For example `ws` might be used for `workspace`. Also there are conventional shortcuts like here `onClick: (e) -> e.preventDefault();`
+
+Variables containing jQuery object better to be named with leading $
+```coffeescript
+div = $("#container div") # OK
+
+$div = $("#container div") # Better
+```
+
+
 <a name="functions"/>
 ## Functions
 

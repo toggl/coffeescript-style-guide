@@ -322,7 +322,21 @@ Use string interpolation instead of string concatenation:
 "this is an " + adjective + " string" # No
 ```
 
-Prefer single quoted strings (`''`) instead of double quoted (`""`) strings, unless features like string interpolation are being used for the given string.
+Prefer double quoted strings (`""`) instead of single quoted (`''`) strings, because it will be easier to just drop in
+string interpolation if needed without need to change quotation characters.
+
+<a name="object-literal"/>
+## Object literal
+
+Inside object literals don't use quote marks if possible
+
+```coffeescript
+obj =
+  user: new User() # Yes
+
+obj =
+  'user': new User() # Yes # No
+```
 
 <a name="conditionals"/>
 ## Conditionals

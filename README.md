@@ -398,6 +398,22 @@ Multi-line if/else clauses should use indentation:
   else ...
 ```
 
+Never do assignment inside if/else clause
+```coffeescript
+  # Yes
+  project = @projects.get(pid)
+  if project
+    ...
+  else
+    ...
+
+  # No
+  if p=@projects.get(pid) then 
+    ...
+  else 
+    ...
+```
+
 <a name="looping_and_comprehensions"/>
 ## Looping and Comprehensions
 

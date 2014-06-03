@@ -138,6 +138,13 @@ Avoid extraneous whitespace in the following situations:
        console.log x, y # Yes
        console.log x , y # No
     ```
+- Immediately before a colon in object literal 
+
+   ```coffeescript
+       something: another # Yes
+       
+       something : another # No
+    ```
 
 Additional recommendations:
 

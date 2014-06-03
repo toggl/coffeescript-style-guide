@@ -256,7 +256,17 @@ transform = getTransform() # Yes
 user = getUser() # Yes
 ```
 
-Though there might be exception in cases where some shortcut is part of internal knowledge domain. For example `ws` might be used for `workspace`. Also there are conventional shortcuts like here `onClick: (e) -> e.preventDefault();`
+Though there might be exception in cases where some shortcut is part of internal knowledge domain. For example `ws` might be used for `workspace`, and `te` be `timeEntry`. Also there are conventional shortcuts like `e` as `event` in event handlers. Another convention is to have `i`,`j`,`k`,`l` etc as indices in small loops.
+```coffeescript
+# Bad
+@collection.filter (i) -> i.id in ids or i.cid in ids
+
+# Good
+@collection.filter (te) -> te.id in ids or te.cid in ids
+
+# Better
+@collection.filter (timeEntry) -> timeEntry.id in ids or timeEntry.cid in ids
+```
 
 Variables containing jQuery object better to be named with leading $
 ```coffeescript
